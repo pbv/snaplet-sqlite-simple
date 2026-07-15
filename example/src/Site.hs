@@ -12,7 +12,7 @@ module Site
 import           Control.Concurrent
 import           Control.Applicative
 import           Control.Monad.Trans (liftIO, lift)
-import           Control.Monad.Trans.Either
+-- import           Control.Monad.Trans.Either
 import           Control.Error.Safe (tryJust)
 import           Control.Lens
 import           Data.ByteString (ByteString)

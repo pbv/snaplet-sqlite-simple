@@ -396,9 +396,9 @@ saveQuery at u@AuthUser{..} = maybe insertQuery updateQuery userId
                   ]
         , params ++ [S.toField $ unUid uid])
     -- The list of column names
-    cols = map (fst . ($at) . fst) $ tail colDef
+    cols = map (fst . ($ at) . fst) $ tail colDef
     vals = map (const "?") cols
-    params = map (($u) . snd) $ tail colDef
+    params = map (($ u) . snd) $ tail colDef
 
 
 ------------------------------------------------------------------------------
@@ -442,6 +442,8 @@ instance IAuthBackend SqliteAuthManager where
                 , " = ?"
                 ]
         querySingle pamConnPool q [login]
+
+    lookupByEmail = error "lookupByEmail not implememented for SQLite backend"
 
     lookupByRememberToken SqliteAuthManager{..} token = do
         let q = Query $ T.concat

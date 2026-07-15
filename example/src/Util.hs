@@ -5,7 +5,7 @@ module Util (
     reader
   , logFail
   , logRunExceptT
-  , liftEither  
+  , Util.liftEither  
   ) where
 
 import           Control.Monad.Except

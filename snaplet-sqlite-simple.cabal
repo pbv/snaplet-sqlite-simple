@@ -1,5 +1,5 @@
 name:           snaplet-sqlite-simple
-version:        1.0.0.2
+version:        1.0.0.3
 synopsis:       sqlite-simple snaplet for the Snap Framework
 description:    This snaplet provides support for using the SQLite
                 database with a Snap Framework application via the
@@ -50,16 +50,16 @@ Library
   build-depends:
     base                       >= 4       && < 5,
     aeson                      >= 0.11.1.4,
-    bytestring                 >= 0.9.1   && < 0.11,
+    bytestring                 >= 0.9.1   && < 0.13,
     clientsession              >= 0.8     && < 0.10,
     configurator               >= 0.3,
     lifted-base                >= 0.2     && < 0.3,
     monad-control              >= 1.0.1.0,
-    lens                       >= 4.0     && < 5,
+    lens                       >= 4.0     && < 6,
     mtl                        >= 2       && < 3,
     sqlite-simple              >= 0.4.1   && < 1.0,
     direct-sqlite              >= 2.3.3   && < 2.4,
-    snap                       >= 1.0     && < 1.1,
+    snap                       >= 1.0     && < 1.2,
     text                       >= 1.2,
     transformers               >= 0.4,
     transformers-base          >= 0.4     && < 0.5,
